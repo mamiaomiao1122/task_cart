@@ -1,4 +1,4 @@
-package com.yuanling.shopping;
+package com.test.shopping;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
