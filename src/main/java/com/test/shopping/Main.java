@@ -13,19 +13,26 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 当前商品的销售记录
  */
 public class Main {
+
     ConcurrentHashMap<String, StoreGood> storeMap =
             new ConcurrentHashMap<String, StoreGood>();
+
     ConcurrentHashMap<String, LineItemImpl> cartMap =
             new ConcurrentHashMap<String, LineItemImpl>();
+
     StoreImpl store = new StoreImpl(storeMap, cartMap);
+
     static AtomicInteger atomicInteger = new AtomicInteger(100);
 
     public static void main(String[] args) {
         Main main = new Main();
         while (true){
             System.out.println("选择操作1,添加商品 2 加入购物车 3结束操作");
+
             Scanner scanner = new Scanner(System.in);
+
             int n=scanner.nextInt();
+            
             switch (n){
                 case 1:main.product();break;
                 case 2:main.consum();break;

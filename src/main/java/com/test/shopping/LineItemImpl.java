@@ -22,15 +22,19 @@ public class LineItemImpl implements LineItem {
      * 成交时候的价格(因为价格不一样，所以得保存)
      */
     private List<PriceAndNumber> salePriceAndNumber;
+
     public String getName() {
         return name;
     }
+
     public int getQuantity() {
         return quantity;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+    
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
